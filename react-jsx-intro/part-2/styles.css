@@ -1,0 +1,22 @@
+/* styles.css or within <style> in index.html */
+.tweet {
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f5f8fa;
+}
+
+.tweet h3 {
+    margin: 0 0 10px 0;
+    color: #1da1f2; /* Twitter blue */
+}
+
+.tweet p {
+    margin: 0 0 10px 0;
+}
+
+.tweet small {
+    color: #657786;
+    font-style: italic;
+}
