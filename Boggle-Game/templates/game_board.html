@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Game Board {% endblock%}
+
+{% block content %}
+
+<h1>Let's Boggle</h1>
+
+
+<div id="game-stats">
+    <p class="score">Score: {{ score }}</p>
+    <p class="high-score">High Score: {{ high_score }}</p>
+    <p class="games-played">Games Played: {{ play_count }}</p>
+</div>
+
+<p id="message-area"></p>
+
+
+<div id="game">
+    <div id="timer">Time left: 60s</div>
+    <form id="guess-form">
+        <input type="text" id="guess-input" name="Guess" required>
+        <button type="submit" id="guess-button">Submit</button>
+    </form>
+    
+    <table id="board">
+        {% for row in board %}
+        <tr>
+            {% for letter in row %}
+            <td>{{letter}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/new-game" method="POST">
+        <button type="submit" id="new-game-button">Start New Game</button>
+    </form>
+</div>
+
+
+
+
+{% endblock %}

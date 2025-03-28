@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Title Here {% endblock%}</title>
+    <link rel="stylesheet" href="/static/pretty.css">
+</head>
+<body>
+    <header>Boggle Game</header>
+    
+    <main>{% block content %} Content Here {% endblock %}</main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/static/boggle.js"></script>
+</body>
+</html>
