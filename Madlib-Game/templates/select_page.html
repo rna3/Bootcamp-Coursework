@@ -1,0 +1,18 @@
+{% extends 'base.html'  %}
+{% block title %}Select a Madlib{% endblock %}
+
+{% block content %}
+
+<h1>Select a Story</h1>
+<form action="/prompt">
+    <select name="story_id">
+        {% for story in stories %}
+            <option value="{{ story.code }}">
+                {{ story.title }}
+            </option>
+        {% endfor %}
+    </select>
+    <button>Select</button>
+</form>
+
+{% endblock %}
