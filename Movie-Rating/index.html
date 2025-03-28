@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+  </head>
+  <body>
+    <h1>Rate a Movie</h1>
+    <form>
+      <input id="movie-title" type="text" placeholder="Name of movie" />
+      <input
+        id="movie-rating"
+        type="number"
+        min="0"
+        max="10"
+        placeholder="Rating 1-10"
+      />
+      <button id="submit-rating" type="submit">Submit Rating</button>
+    </form>
+    <h2>List of Rated Movies</h2>
+    <div>
+      <button id="sort-name">Sort by Name</button>
+      <button id="sort-rating">Sort by Rating</button>
+    </div>
+    <ol></ol>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
