@@ -1,0 +1,15 @@
+{{ form.hidden_tag() }}
+
+{% for field in form if field.widget.input_type != 'hidden'%}
+
+<div>
+    {% if field == form.available %}
+        {{ field.label(class="form-check-label") }}
+        {{ field(class="form-check-input") }}
+    {% else %}
+        {{ field.label }}
+        {{ field(class="form-control") }}
+    {% endif %}
+</div>
+
+{% endfor %}
